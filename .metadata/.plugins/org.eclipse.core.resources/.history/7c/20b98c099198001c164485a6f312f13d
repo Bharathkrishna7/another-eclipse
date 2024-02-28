@@ -1,0 +1,20 @@
+package com.ExcelDataTest;
+
+import org.testng.annotations.BeforeMethod;
+
+import com.BasePages.TestBase;
+
+public class RegistrationTest extends TestBase {
+
+	RegistrationTest rg;
+
+	public Registationtest() {
+		super();
+	}
+
+	@BeforeMethod()
+	public void setup() {
+		initialization();
+		rg = new RegistrationTest();
+	}
+}

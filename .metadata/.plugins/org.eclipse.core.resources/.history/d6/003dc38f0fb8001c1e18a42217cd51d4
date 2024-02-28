@@ -1,0 +1,18 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Actions in automation">
+	<test name="Alerts">
+
+		<parameter name="url" value="http://demo.automationtesting.in/Register.html" />
+			<parameter name="Autourl" value="http://automationpractice.com/index.php"/>
+
+		<classes>
+
+			<class name="com.pomAutomationTest.ActionWithAlertsTest" />
+
+
+		</classes>
+
+
+	</test>
+</suite>

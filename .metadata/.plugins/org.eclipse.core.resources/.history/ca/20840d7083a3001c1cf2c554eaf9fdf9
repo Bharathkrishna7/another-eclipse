@@ -1,0 +1,11 @@
+package testRunner;
+
+import org.junit.runner.RunWith;
+
+
+
+@SuppressWarnings("deprecation")
+@RunWith(Cucumber.class)
+public class FlipkartTestrunner {
+
+}

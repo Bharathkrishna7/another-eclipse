@@ -1,0 +1,32 @@
+package com.Automationlogin.Test;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+
+public class BaseTest {
+	static WebDriver driver;
+	String url = "http://practice.automationtesting.in/my-account/";
+       @BeforeTest
+	public void launchbrowser() {
+		openChromeBrowser(url);
+	}
+
+	public static void openChromeBrowser(String url) {
+		System.setProperty("webdriver.chrome.driver", "D:\\Browser drivers\\chromedriver_win32 96\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.get(url);
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
+	}
+	
+	
+	@AfterTest()
+	public void quit() {
+		driver.quit();
+	}
+
+}

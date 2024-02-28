@@ -1,0 +1,53 @@
+package com.Automation.Base;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+
+import com.Utils.IConstants;
+
+public class kBaseTest {
+	
+	public static WebDriver driver;
+	public static Properties prop;
+
+	
+	public kBaseTest() {
+		try {
+			prop = new Properties();
+	//FileInputStream ip = new FileInputStream(System.getProperty("user.dir") +"/src/test/resources/env_Properties");
+			FileInputStream ip = new FileInputStream(IConstants.env_Path);
+			prop.load(ip);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	@BeforeTest
+	public void geturl() {
+		openChromeBrowser();
+		driver.get(prop.getProperty("url"));
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
+
+	}
+
+	public static void openChromeBrowser() {
+		System.setProperty("webdriver.chrome.driver", IConstants.chromeDriver_path);
+		driver = new ChromeDriver();
+	}
+
+	@AfterTest()
+	public void quit() {
+		 driver.quit();
+	}
+
+}

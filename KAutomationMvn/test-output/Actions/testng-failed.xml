@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Actions]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Alerts(failed)">
+    <parameter name="url" value="http://demo.automationtesting.in/Register.html"/>
+    <classes>
+      <class name="com.pomAutomationTest.ActionWithAlertsTest">
+        <methods>
+          <include name="AutomationDemo" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.pomAutomationTest.ActionWithAlertsTest -->
+    </classes>
+  </test> <!-- Alerts(failed) -->
+</suite> <!-- Failed suite [Actions] -->

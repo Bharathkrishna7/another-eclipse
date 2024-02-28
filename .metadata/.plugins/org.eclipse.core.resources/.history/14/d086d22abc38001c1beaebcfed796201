@@ -1,0 +1,12 @@
+package com.TestNG.RealWork;
+
+import org.testng.annotations.BeforeTest;
+
+public class BaseTest {
+	
+	@BeforeTest()
+	public void beforeTest() {
+		
+	}
+
+

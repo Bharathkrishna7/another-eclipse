@@ -1,0 +1,83 @@
+IMPORTANT POINTS FOR INTERVIEW:-
+-------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------
+BASIC TESTNG ANNOTATIONS SEQUENCE:-
+
+@BeforeSuite
+@BeforeTest
+@BeforeClass
+@BeforeMethod
+@Test
+@AfterMethod
+@AfterClass
+@AfterTest
+@AfterSuite
+.............................................
+*Here @Test is nothing but an "TestCase".
+*Whenever we run a program with "lot of @Test annotations" @Test Run in b/w 
+      @BeforeMethod & @AfterMethod ....
+*@BeforeTest executes beforetestTage "EX:-<test name=" ">" in 'Xml'..
+*@BeforeMethod executes before and After the @Test annotation  in program..
+
+1.*In @Test annotation we can do "grouping" Ex:-@Test(groups = "validdetails") it can divid's testcases..
+
+2.*if they are 4 testcases like
+EX:-@Test()
+==>public void login()
+   @Test()
+==>public void userdetails(dependsonMethods="login")
+   @Test()
+==>public void search(dependsonMethods="login")
+   @Test()
+==>public void address(dependsonMethods="login")
+>> if we write like this.if login fails remaining testCases will 
+    atomatically skiped bec of "dependsonMethods keyword".. 
+    
+ 3.*if we want to execute a testcase morethan one time we can use a keyword called "invocationcount"
+  Ex:-@Test(invocationCount=4), now it will execute 4 times. 
+  
+ 4.*In testng to handle exceptions without using "try catch" in this form.. 
+  >>@Test(expectedException=NumberFormatException.class) 
+  >>@Test(expectedException=ArrayIndexoutofbounsException.class)
+    
+ 5.* Xml file with lot of testng classes to execute
+ 
+    <suite name="Automation suite">
+    
+       <test name=">
+       
+         <classes>
+              <class name="com.Cname"/>
+              <class name="com.Cname"/> 
+              <class name="com.Cname"/> 
+              <class name="com.Cname"/> 
+         </classes>
+       </test>
+     </suite>             
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+ 

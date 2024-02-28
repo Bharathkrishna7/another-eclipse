@@ -1,0 +1,31 @@
+package com.ExcelDataTest;
+
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import com.BasePages.TestBase;
+import com.ExcelDataPages.Registrationpage;
+
+public class RegistrationTest extends TestBase {
+
+	Registrationpage rg;
+
+	public RegistrationTest() {
+		super();
+	}
+
+	@BeforeMethod()
+	public void setup() {
+		initialization();
+		rg = new Registrationpage();
+	}
+	@Test
+	public void regfld() {
+		rg.rg
+	}
+	@AfterMethod()
+	public void quit() {
+		
+	}
+}

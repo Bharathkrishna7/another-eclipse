@@ -1,0 +1,61 @@
+package com.pracTofindAns;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+
+import com.BasePages.TestBase;
+
+public class Dropdown extends TestBase {
+	
+	public Dropdown() {
+		PageFactory.initElements(driver, this);
+	}
+	
+	@FindBy(xpath="//select[@id='Skills']")
+	private WebElement Skddown;
+
+	@FindBy(xpath="//span[@role='combobox']")
+	private WebElement COddown;
+	@FindBy(xpath ="///li[contains(text(),'Netherlands')]/..")  
+	private WebElement COddown1;
+	
+	@FindBy(xpath = "//div[@id='msdd']")
+	private WebElement language;
+	@FindBy(xpath="//select[@placeholder='Year']")
+	private WebElement Yddown;
+	@FindBy(xpath = "//select[@placeholder='Month']")
+	private WebElement Mddown;
+	@FindBy(xpath = "//select[@placeholder='Day']")
+	private WebElement Dddown;
+	
+	public void ddownS() {
+		Select drop=new Select(Skddown);
+		drop.selectByValue("Android");
+	}
+	public void ddownC() {
+		COddown.click();
+	//	COddown1.click();
+	  }
+	public void ddownC1() {
+	COddown1.click();
+	  }
+	
+	
+	public void Language(String lang) {
+		//ExpectedConditions.elementToBeClickable(language);
+		languages.sendKeys(lang);
+		
+	}
+	public void ddownDOB() {
+		Select dropdob=new Select(Yddown);
+		dropdob.selectByValue("1994");
+		Select dropdob2=new Select(Mddown);
+		dropdob2.selectByValue("June");
+		Select dropdob3=new Select(Dddown);
+		dropdob3.selectByValue("7");
+	}
+
+}

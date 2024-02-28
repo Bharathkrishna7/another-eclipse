@@ -1,0 +1,21 @@
+package com.TestNG.RealWork;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeTest;
+
+public class BaseTest {
+	static WebDriver driver;
+	
+	@BeforeTest()
+	public void beforeTest() {
+		
+		System.setProperty("webdriver.chrome.driver", "D:\\Browser drivers\\chromedriver_win32 94\\chromedriver.exe");
+	    driver = new ChromeDriver();
+		driver.get(url);
+		driver.manage().window().maximize();
+	}
+		
+	}
+
+

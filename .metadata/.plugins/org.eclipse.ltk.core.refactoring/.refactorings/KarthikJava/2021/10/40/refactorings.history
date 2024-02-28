@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;ip&apos; in &apos;com.Opps.MultipleInheritance.GrandParentEncaptulation.main(...)&apos; to &apos;ge&apos;&#x0D;&#x0A;- Original project: &apos;KarthikJava&apos;&#x0D;&#x0A;- Original element: &apos;com.Opps.MultipleInheritance.GrandParentEncaptulation.main(String[]).ip&apos;&#x0D;&#x0A;- Renamed element: &apos;ip&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;ip&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;com.Opps.MultipleInheritance{GrandParentEncaptulation.java[GrandParentEncaptulation~main~\[QString;@ip!173!233!198!199!QGrandParentEncaptulation;!0!false" name="ge" references="true" stamp="1633168699791" version="1.0"/>
+</session>

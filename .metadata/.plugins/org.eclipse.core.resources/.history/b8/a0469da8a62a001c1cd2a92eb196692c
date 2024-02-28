@@ -1,0 +1,28 @@
+package com.javaTaskes;
+
+public class Arrays {
+
+	public static void main(String[] args) {
+
+		int favNum[] = new int[4];
+
+		favNum[0] = 7;
+		favNum[1] = 16;
+		favNum[2] = 77;
+		favNum[3] = 7777;
+
+		for (int f = 0; f < favNum.length; f++) {
+			System.out.println("fav numbers are " + favNum[f]);
+		}
+
+		String favname[] = new String[3];
+		favname[0] = "park min";
+		favname[1] = "radha";
+		favname[2] = "krishna";
+		for(String s=0;s<favname.length;s++) {
+			System.out.println(favname[s]);
+		}
+
+	}
+
+}

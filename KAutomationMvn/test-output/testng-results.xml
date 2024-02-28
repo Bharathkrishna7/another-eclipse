@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-06-01T11:40:35 IST" name="Default suite" finished-at="2022-06-01T11:41:45 IST" duration-ms="70162">
+    <groups>
+    </groups>
+    <test started-at="2022-06-01T11:40:35 IST" name="Default test" finished-at="2022-06-01T11:41:45 IST" duration-ms="70162">
+      <class name="com.MouseInterractionTest.MxplayerAction">
+        <test-method is-config="true" signature="openchrome()[pri:0, instance:com.MouseInterractionTest.MxplayerAction@3514a4c0]" started-at="2022-06-01T11:40:35 IST" name="openchrome" finished-at="2022-06-01T11:41:18 IST" duration-ms="42416" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openchrome -->
+        <test-method signature="mxpalyertest()[pri:0, instance:com.MouseInterractionTest.MxplayerAction@3514a4c0]" started-at="2022-06-01T11:41:18 IST" name="mxpalyertest" finished-at="2022-06-01T11:41:45 IST" duration-ms="27571" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mxpalyertest -->
+        <test-method is-config="true" signature="closebrowser()[pri:0, instance:com.MouseInterractionTest.MxplayerAction@3514a4c0]" started-at="2022-06-01T11:41:45 IST" name="closebrowser" finished-at="2022-06-01T11:41:45 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closebrowser -->
+      </class> <!-- com.MouseInterractionTest.MxplayerAction -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

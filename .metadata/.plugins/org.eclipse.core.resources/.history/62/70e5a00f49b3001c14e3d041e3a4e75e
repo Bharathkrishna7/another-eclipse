@@ -1,0 +1,26 @@
+package com.InterviewQuestions;
+
+public class SumOFArrays {
+
+	public static void main(String[] args) {
+		
+		int a[]= {2,8,6,8};
+		int sum=0;
+		for(int i=0;i<a.length;i++) {
+			sum=sum+a[i];
+		}
+		System.out.println("sum of arrays are: "+sum);
+
+		int array[]= {4,6,8,1};
+		int sum1=0;
+		for(int totalsum:array) {
+			arraysum=totalsum+sum1;
+		}
+		System.out.println(arraysum);
+		
+		
+		
+		
+	}
+
+}

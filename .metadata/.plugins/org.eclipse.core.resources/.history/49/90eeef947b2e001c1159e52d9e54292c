@@ -1,0 +1,56 @@
+package seleniumHWorkes;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+
+import seleniumClasses.Commons;
+
+public class AlertsHomeWork extends Commons {
+
+	static String url = "http://demo.automationtesting.in/Alerts.html";
+	// driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+
+	public static void main(String[] args) throws InterruptedException {
+
+		openChromeBrowser(url);
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//a[contains(text(),'Alert with OK & Cancel')]")).click();
+		driver.findElement(By.xpath("//button[contains(text(),'click the button to display a confirm box')]")).click();
+		Alert alert = driver.switchTo().alert();
+		alert.accept();
+			// ok button verification
+		String exptext = "You pressed Ok";
+    	String actText = driver.findElement(By.xpath("//p[@id='demo']")).getText();
+	    verifytext(exptext, actText);
+	    System.out.println("==========================");
+	    
+	     Thread.sleep(5000);
+		
+	     driver.findElement(By.xpath("//button[contains(text(),'click the button to display a confirm box')]")).click();
+		alert.dismiss();
+		  // Cancel button verification
+		 exptext = "You Pressed Cancel";
+		 actText = driver.findElement(By.xpath("//p[contains(text(),'You Pressed Cancel')]")).getText();
+		verifytext(exptext,actText );
+		System.out.println("===================");
+		Thread.sleep(5000);
+		
+		//Entering textbox
+		driver.findElement(By.xpath("//a[contains(text(),'Alert with Textbox')]")).click();
+		driver.findElement(By.xpath("//button[@class='btn btn-info']")).click();
+		//driver.findElement(By.xpath("//div[@id='Textbox']/button")).click();
+		alert.sendKeys("#parkdarling");
+		Thread.sleep(5000);
+		alert.accept();
+		
+		//exptext="Hello #parkdarling How are you today";
+		String text=driver.findElement(By.xpath("//p[@id='demo1']")).getText();
+		//verifytext(exptext, actText);
+		System.out.println("printing "+text);
+		
+		
+
+
+	}
+
+}

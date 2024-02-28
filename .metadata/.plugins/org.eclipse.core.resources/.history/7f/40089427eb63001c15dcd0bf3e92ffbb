@@ -1,0 +1,37 @@
+package com.LoginTest;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import com.Automation.Base.BaseTest;
+import com.Utils.ConfigReader;
+
+import loginPage.Automationloginpage;
+
+public class AutomationLoginTest extends BaseTest {
+
+	Automationloginpage lop;
+	ConfigReader cfgReader;
+	WebDriver driver;
+
+	@BeforeMethod()
+	public void setup() {
+
+		lop = new Automationloginpage(driver);
+		cfgReader = new ConfigReader();
+
+	}
+
+	@Test(description = "Verify with Valid Credentials", priority = 0, groups = "validdetails")
+	public void validlogin() {
+		lop.login(cfgReader.getvalidemail(), cfgReader.getpassword());
+	}
+
+	@AfterMethod()
+	public void teardown() {
+		// driver.quit();
+	}
+
+}

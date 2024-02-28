@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;NAutomationMvn/src/test/resources/TestSuites/GitloginSuite.xml&apos; to &apos;AutomationAppSuite.xml&apos;" description="Rename resource &apos;GitloginSuite.xml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/test/resources/TestSuites/GitloginSuite.xml" name="AutomationAppSuite.xml" stamp="1646393484245" updateReferences="true"/>
+</session>

@@ -1,0 +1,41 @@
+package com.DatadrivenTest;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import com.excel.utility.Xls_Reader;
+
+public class ParameterizeTest {
+
+	public static void main(String[] args) {
+
+		// WebDriver code
+		System.setProperty("webdriver.chrome.driver", "D:\\Browser drivers\\chromedriver_win32 95\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("http://automationpractice.com/index.php?controller=authentication&back=my-account");
+
+		//Data driven:- it's used to Driving the test data from excel files or any other files 
+		
+		// Get testdata from excel
+		Xls_Reader reader = new Xls_Reader("C:\\Users\\Gowtham Krishna\\Desktop\\Automationdata.xlsx");
+
+		int rowcount = reader.getRowCount("Login");
+
+		// Parameterization is always done by forloop
+		for (int rownum = 2; rownum <= rowcount; rownum++) {
+			System.out.println("=========");
+			String mail = reader.getCellData("Login", "email", rownum);
+			System.out.println(mail);
+			String pwd = reader.getCellData("Login", "password", rownum);
+			System.out.println(pwd);
+            //Enter the data
+			driver.findElement(By.xpath("//input[@id='email']")).clear();
+			driver.findElement(By.xpath("//input[@id='email']")).sendKeys(mail);
+			driver.findElement(By.xpath("//input[@name='passwd']")).clear();
+			driver.findElement(By.xpath("//input[@name='passwd']")).sendKeys(pwd);
+
+		}
+	}
+
+}

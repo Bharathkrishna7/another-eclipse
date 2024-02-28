@@ -1,0 +1,34 @@
+package seleniumClasses;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+
+public class Dropdown extends Commons {
+
+	static String url="http://demo.automationtesting.in/Register.html"; 
+
+	public static void main(String[] args) {
+	openChromeBrowser(url);
+	 
+	WebElement Ddown=driver.findElement(By.xpath("//select[@id='Skills']"));
+	
+	Select dd=new Select(Ddown);
+	List<WebElement> Doptions=dd.getOptions();
+	System.out.println("Total sKills are:"+Doptions.size());
+
+	for(WebElement drdo:Doptions) {
+		String text=drdo.getText();
+	System.out.println(text);	
+	}
+	
+	/*for(int i=0;i<Doptions.size();i++) {
+		String options=Doptions.get(i).getText();
+		System.out.println(options);
+	}*/
+		
+	}
+
+}

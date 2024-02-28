@@ -1,0 +1,6 @@
+Cucumber Archetecture:-
+==>"It contains feature files" .Where we can Write our Scenario's in Gherikens language.Its in plain text which was easy 
+   to understood by everyone.
+==>"StepDefinitions".Here we create methodes for scenarios and perform actions using java and selenium.
+==>"TestRunners".Here where we can run the feature files.And we can create reportes like "HTML and jSON" by using 
+    "Plugin tag".

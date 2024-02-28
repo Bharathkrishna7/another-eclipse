@@ -1,0 +1,12 @@
+package com.TestNG.RealWork;
+
+import org.openqa.selenium.By;
+import org.testng.annotations.BeforeMethod;
+
+public class LoginTest extends BaseTest {
+	@BeforeMethod()
+	public void gotoLoginpage() {
+		driver.findElement(By.cssSelector("login")).click();
+	}
+
+}

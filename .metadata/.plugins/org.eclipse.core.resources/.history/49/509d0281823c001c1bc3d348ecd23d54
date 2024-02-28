@@ -1,0 +1,50 @@
+package com.Automation.Tests;
+
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import com.Automation.Pages.HomePage;
+import com.Automation.Pages.LoginMyStorePage;
+import com.Automation.Pages.RegistrationPage;
+
+public class LoginMyStoreTest extends BaseTest {
+	String validmail = "bharathkrishna7777@gmail.com";
+	String Invalidmail = "bharathkrishna@gmail.com";
+
+	LoginMyStorePage sp;
+	HomePage hp;
+	RegistrationPage rp;
+
+	@BeforeMethod()
+	public void beforemethod() {
+		sp = new LoginMyStorePage(driver);
+		hp = new HomePage(driver);
+		hp.navToLoginMyStore();
+		rp=new RegistrationPage(driver);
+
+	}
+
+	@Test(description = "verify with valid email", priority = 1)
+	public void Validemail() {
+		sp.createAccount(validmail);
+		
+       
+	}
+
+	/*
+	 * @Test (description = "verify with invalid email") public void InValidemail(){
+	 * sp.createAccount(Invalidmail); }
+	 */
+	@Test(description = "verify with empty email", priority = 2)
+	public void Emptyemail() {
+		sp.createAccount("");
+
+	}
+
+	@AfterMethod()
+	public void Aftermethod() {
+	hp.navToLoginMyStore();
+	}
+
+}

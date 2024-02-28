@@ -1,0 +1,14 @@
+package com.javaTaskes;
+
+public class Arrays {
+	
+	String[] favNames=new String[4];
+	favNames[0]="park";
+	
+
+	public static void main(String[] args) {
+	
+
+	}
+
+}

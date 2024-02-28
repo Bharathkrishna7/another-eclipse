@@ -1,0 +1,17 @@
+package seleniumHWorkes;
+
+import org.testng.annotations.BeforeMethod;
+
+public class Amazon {
+	
+	@BeforeMethod
+	public void launchbrowser() {
+	
+	
+		
+	}
+	
+	
+	
+
+}

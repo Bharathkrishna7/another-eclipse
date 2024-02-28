@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="EGit.KnownHosts">
+		<item value="git.eclipse.org"/>
+		<item value="github.com"/>
+		<item value="bitbucket.org"/>
+	</list>
+	<list key="RepositorySelectionPage.UsedUris">
+		<item value="https://github.com/Bharathkrishna7/Automation2022.git"/>
+		<item value="https://github.com/Bharathkrishna7/Autowith-T-p.git"/>
+	</list>
+	<list key="CommitDialog.authorValues">
+		<item value="Gowtham Krishna &lt;Gowtham Krishna@LAPTOP-4S1GC75Q&gt;"/>
+	</list>
+	<list key="CommitDialog.committerValues">
+		<item value="Gowtham Krishna &lt;Gowtham Krishna@LAPTOP-4S1GC75Q&gt;"/>
+	</list>
+	<section name="org.eclipse.egit.ui.internal.staging.StagingView">
+		<item key="MAIN_SASH_FORM_ORIENTATION_VERTICAL" value="false"/>
+		<item key="HORIZONTAL_SASH_FORM_WEIGHT" value="570,429"/>
+		<item key="STAGING_SASH_FORM_WEIGHT" value="560,439"/>
+		<item key="sortItemState" value="true"/>
+	</section>
+	<section name="GitCommitMessageComponent">
+		<list key="C:\Users\Gowtham Krishna\git\Autowith-T-p\.git">
+			<item value="empty"/>
+		</list>
+		<list key="C:\Users\Gowtham Krishna\git\Automation2022\.git">
+			<item value="false"/>
+			<item value="Gowtham Krishna &lt;Gowtham Krishna@LAPTOP-4S1GC75Q&gt;"/>
+			<item value="selenium"/>
+			<item value="Gowtham Krishna &lt;Gowtham Krishna@LAPTOP-4S1GC75Q&gt;"/>
+			<item value="93487b632313faf15f444cb136f41a354e54c8f2"/>
+			<item value="0"/>
+			<item value="false"/>
+		</list>
+		<list key="C:\Users\Gowtham Krishna\git\Automation 2022\.git">
+			<item value="false"/>
+			<item value="Gowtham Krishna &lt;Gowtham Krishna@LAPTOP-4S1GC75Q&gt;"/>
+			<item value="Selenium"/>
+			<item value="Gowtham Krishna &lt;Gowtham Krishna@LAPTOP-4S1GC75Q&gt;"/>
+			<item value="93487b632313faf15f444cb136f41a354e54c8f2"/>
+			<item value="0"/>
+			<item value="false"/>
+		</list>
+		<list key="C:\Users\Gowtham Krishna\git\SeleniumRepository\.git">
+			<item value="empty"/>
+		</list>
+	</section>
+	<section name="org.eclipse.egit.ui.internal.push.PushResultDialog.dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="619"/>
+		<item key="DIALOG_Y_ORIGIN" value="204"/>
+		<item key="DIALOG_WIDTH" value="700"/>
+		<item key="DIALOG_HEIGHT" value="481"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+		<list key="sashWeights">
+			<item value="600"/>
+			<item value="400"/>
+		</list>
+	</section>
+</section>

@@ -1,0 +1,20 @@
+package com.InterviewQuestions;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Flipkart {
+	
+	WebDriver driver;
+	
+	public void chromebrowserLaunch() {
+		System.setProperty("webdriver.chrome.driver", "D:/Browser drivers/chromedriver_win32 97/chromedriver.exe");
+		driver=new ChromeDriver();
+		
+	}
+	
+	public void flipkart() {
+		
+	}
+
+}

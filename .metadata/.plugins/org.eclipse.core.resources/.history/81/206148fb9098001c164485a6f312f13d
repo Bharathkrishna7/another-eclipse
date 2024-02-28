@@ -1,0 +1,7 @@
+package com.ExcelDataTest;
+
+import com.BasePages.TestBase;
+
+public class RegistrationTest extends TestBase {
+
+}

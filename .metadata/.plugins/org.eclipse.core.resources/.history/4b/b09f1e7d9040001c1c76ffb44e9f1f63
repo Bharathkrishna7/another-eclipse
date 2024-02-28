@@ -1,0 +1,83 @@
+package com.Automation.Tests;
+
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import com.Automation.Pages.CreateAccountPage;
+import com.Automation.Pages.HomePage;
+import com.Automation.Pages.RegistrationPage;
+
+public class RegistrationPageTest extends BaseTest {
+
+	String accountmail = "bharathkrishna@gmail.com";
+	String firstname = "bharath";
+	String lastname = "krishna";
+	String password = "9441044154";
+	String Day = "7";
+	String Month = "6";
+	String Year = "1993";
+    String state = "Alaska";
+    String address="#3-6-269,MYM Money center,3rd floor,M.S Reddy boys hostel";
+    String city="Kenai";
+    String code="99611";
+    String mobileNo="9642628313";
+    
+
+	// public Object info;
+
+	HomePage hp;
+	CreateAccountPage ap;
+	RegistrationPage rp;
+
+	@BeforeMethod()
+	public void beforemethod() {
+		hp = new HomePage(driver);
+		ap = new CreateAccountPage(driver);
+		rp = new RegistrationPage(driver);
+
+	}
+
+	@Test(description = "home page signin", priority = 0)
+	public void signin() {
+		hp.navToLoginMyStore();
+
+	}
+
+	@Test(description = "Entering to register page with mail", priority = 1)
+	public void accountmail() {
+		ap.createAccount(accountmail);
+	}
+
+	@Test(description = "registration page details", priority = 2)
+	public void regisdetails() {
+		rp.checkbox();
+	}
+
+	@Test(description = "registration personal information", priority = 3)
+	public void personaldetails() {
+		rp.personalinformation(firstname, lastname, password);
+
+	}
+
+	@Test(description = "dropdown data", priority = 4)
+	public void dateobir() {
+		rp.dateofbirth(Day, Month, Year);
+	}
+
+	@Test(description = "State dropdown", priority = 5)
+	public void state_dropdown() {
+		rp.statedropdown(state);
+	}
+	@Test(description = "address of registration",priority = 6)
+	public void youraddress() {
+		rp.address(address, city, code, mobileNo);
+	}
+	
+
+	@AfterMethod
+	public void aftermethod() {
+		System.out.println("regdetails");
+	}
+
+}

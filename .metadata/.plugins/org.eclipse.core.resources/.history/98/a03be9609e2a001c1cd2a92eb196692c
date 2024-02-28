@@ -1,0 +1,18 @@
+package com.javaTaskes;
+
+public class Arrays {
+	
+	int favNum[]=new int[4];
+	
+	favNum[0]=7;
+	favNum[1]=16;
+	favNum[2]=77;
+	favNum[3]=7777;	
+	
+
+	public static void main(String[] args) {
+	
+
+	}
+
+}

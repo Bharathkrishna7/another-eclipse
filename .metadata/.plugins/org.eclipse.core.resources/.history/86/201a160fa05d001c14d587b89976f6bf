@@ -1,0 +1,42 @@
+package com.Automation.Base;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+
+import com.Utils.ConfigReader;
+import com.Utils.IConstants;
+
+public class BaseTest {
+	ConfigReader cfgReader;
+	static WebDriver driver;
+
+//	@BeforeSuite
+//	public void init() {
+	//	cfgReader = new ConfigReader();
+	//	cfgReader.readConfig();
+		//}
+
+	@BeforeTest
+	public void launchbrowser() {
+		cfgReader = new ConfigReader();
+		driver.get(cfgReader.getUrl());
+		openChromeBrowser();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
+	}
+
+	public static void openChromeBrowser() {
+		System.setProperty("webdriver.chrome.driver", IConstants.chrome_driver);
+		driver = new ChromeDriver();
+	}
+
+	@AfterTest()
+	public void quit() {
+		driver.quit();
+	}
+
+}

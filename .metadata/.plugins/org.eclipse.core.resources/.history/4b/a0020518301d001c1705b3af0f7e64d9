@@ -1,0 +1,13 @@
+package com.Opps.Programs;
+
+public class Parent extends GrandParent {
+
+	public static void main(String[] args) {
+		
+		Parent c=new Parent();
+		c.name="Ramesh"; //parent name Changing to Child name
+		c.propertys();
+
+	}
+
+}

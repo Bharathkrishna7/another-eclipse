@@ -1,0 +1,25 @@
+io.cucumber.junit.UndefinedStepException: The step 'enetr into chromebrowser' and 3 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("enetr into chromebrowser")
+public void enetr_into_chromebrowser() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("Open amazon application")
+public void open_amazon_application() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("search for mobile")
+public void search_for_mobile() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("close the browser")
+public void close_the_browser() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+

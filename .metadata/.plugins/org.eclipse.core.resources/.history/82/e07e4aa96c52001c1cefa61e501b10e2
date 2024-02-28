@@ -1,0 +1,54 @@
+package com.Automationlogin.Test;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import com.Automationlogin.pages.LoginPage;
+import com.Automationlogin.pages.LogoutPage;
+import com.Automationlogin.pages.MyaccountPage;
+
+
+public class LoginpageTest extends BaseTest {
+	
+	
+	MyaccountPage ap;
+	LoginPage lp;
+	LogoutPage lop;
+
+	@BeforeMethod()
+	public void beforemethod() {
+		ap = new MyaccountPage(driver);
+		lp = new LoginPage(driver);
+		lop = new LogoutPage(driver);
+	}
+	@DataProvider
+	public Iterator<Object[]> getTestdata() {
+		ArrayList<Object[]> testdata = TestUtil.getDataFromExcel();
+		return testdata.iterator();
+	}
+	
+	@Test(dataProvider = "getTestdata")
+	public void invalidlogin(String Email, String Password) {
+		lp.login("Email", "Password");
+	}
+	@Test(dataProvider = "getTestdata")
+	public void validlogin(String Email, String Password) {
+		lp.login("Email", "Password");
+	}
+	
+	@AfterMethod()
+	public void stop() {
+		lop.logout();
+	}
+	
+	
+	
+	
+	
+
+}

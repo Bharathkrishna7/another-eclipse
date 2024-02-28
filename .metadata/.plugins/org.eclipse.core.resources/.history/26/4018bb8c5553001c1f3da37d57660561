@@ -1,0 +1,11 @@
+package javaConcepts;
+
+public class Jobpractice {
+
+	public static void main(String[] args) {
+		
+		System.out.println(10 + 20 + "Test");
+
+	}
+
+}

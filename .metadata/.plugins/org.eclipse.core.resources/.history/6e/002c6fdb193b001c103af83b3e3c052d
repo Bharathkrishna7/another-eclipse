@@ -1,0 +1,24 @@
+package com.Automation.Pages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class LoginPage {
+
+	@FindBy(id = "email")
+	private WebElement txtfld_email;
+
+	@FindBy(name = "passwd")
+	private WebElement txtfld_password;
+
+	@FindBy(xpath = "//button[@id='SubmitLogin']")
+	private WebElement btn_signin;
+
+	public void login(String uname,String password) {
+		txtfld_email.sendKeys(uname);
+		txtfld_password.sendKeys(password);
+		btn_signin.click();
+		  
+		
+	}
+}

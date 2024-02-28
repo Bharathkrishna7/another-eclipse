@@ -1,0 +1,19 @@
+package com.Opps.MultipleInheritance;
+
+public class Parent extends GrandParent {
+
+	public static void main(String[] args) {
+		
+		Parent p=new Parent();
+		p.name="Ramesh"; //parent name Changing to Child name
+		p.propertys();
+	
+		public void additionalProperty() {
+		int flates=2;
+		System.out.println("Ramesh having "+flates+" flates");
+
+	}
+		
+	}
+
+}

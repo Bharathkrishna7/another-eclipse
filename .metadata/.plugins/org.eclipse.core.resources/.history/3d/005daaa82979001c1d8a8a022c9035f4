@@ -1,0 +1,14 @@
+package com.javaPrograms;
+
+public class Abstraction {
+	public static void main(String[] args) {
+		
+	}
+}
+
+class bike{
+	 public void race() {
+		 System.out.println("racing");
+	 }
+	
+}

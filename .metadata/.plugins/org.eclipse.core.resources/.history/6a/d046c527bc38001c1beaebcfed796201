@@ -1,0 +1,10 @@
+package com.TestNG.RealWork;
+
+public class BaseTest {
+	
+	@BeforeTest()
+	public void beforeTest() {
+		
+	}
+
+

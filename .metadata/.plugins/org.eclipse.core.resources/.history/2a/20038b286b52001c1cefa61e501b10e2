@@ -1,0 +1,27 @@
+package com.Automationlogin.Test;
+
+import java.util.ArrayList;
+
+import com.excel.utility.Xls_Reader;
+
+public class TestUtil {
+	static Xls_Reader reader;
+
+	public static ArrayList<Object[]> getDataFromExcel() {
+		ArrayList<Object[]> myData = new ArrayList<Object[]>();
+		try {
+			reader = new Xls_Reader("C:\\Users\\Gowtham Krishna\\Desktop\\Automationdata.xlsx");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		for (int rownum = 2; rownum <= reader.getRowCount("Logindemo"); rownum++) {
+			String email = reader.getCellData("Logindemo", "Email", rownum);
+			String password = reader.getCellData("Logindemo", "Password", rownum);
+
+			Object ob[] = { Email, Password };
+			myData.add(ob);
+		}
+		return myData;
+	}
+
+}
